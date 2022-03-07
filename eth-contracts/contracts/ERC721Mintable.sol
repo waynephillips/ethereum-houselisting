@@ -526,7 +526,7 @@ contract WaynesRealEstateToken is ERC721Metadata {
     //      -returns a true boolean upon completion of the function
     //      -calls the superclass mint and setTokenURI functions
     constructor (string memory name, string memory symbol)
-        ERC721Metadata("WaynesRealEstateToken", "WSPPROPNFT", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/") public {
+        ERC721Metadata(name,symbol, "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/") public {
     }
     function mint(address to, uint256 tokenId) public onlyOwner returns (bool){
         _mint(to, tokenId);

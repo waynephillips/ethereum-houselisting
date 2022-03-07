@@ -47,7 +47,7 @@ contract Pausable is  Ownable {
         if (_paused) {
             emit Paused(msg.sender);
         } else {
-            emit Unpaused(msg.sender);
+            emit UnPaused(msg.sender);
         }
     }
 //  3) create an internal constructor that sets the _paused variable to false
@@ -240,7 +240,7 @@ contract ERC721 is Pausable, ERC165 {
         _tokenOwner[tokenId] = to;
         _ownedTokensCount[to].increment();
         // TODO emit Transfer event
-        emit Transfer(from, to, tokenId);
+        emit Transfer(address(0), to, tokenId);
     }
 
     // @dev Internal function to transfer ownership of a given token ID to another address.
@@ -504,12 +504,6 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
         return _tokenURIs[tokenId];
     }
 
-    function tokenURI(uint256 tokenId) external view returns (string memory) {
-        require(_exists(tokenId));
-        return _tokenURIs[tokenId];
-    }
-
-
     // TODO: Create an internal function to set the tokenURI of a specified tokenId
     // It should be the _baseTokenURI + the tokenId in string form
     // see https://github.com/oraclize/ethereum-api/blob/master/oraclizeAPI_0.5.sol for strConcat()
@@ -534,7 +528,7 @@ contract WaynesRealEstateToken is ERC721Metadata {
     constructor (string memory name, string memory symbol)
         ERC721Metadata("WaynesRealEstateToken", "WSPPROPNFT", "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/") public {
     }
-    function mint(address to, uint256 tokenId, string uri) public onlyOwner returns (bool){
+    function mint(address to, uint256 tokenId) public onlyOwner returns (bool){
         _mint(to, tokenId);
         setTokenURI(tokenId);
         return true;

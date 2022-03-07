@@ -2,10 +2,8 @@ var WaynesRealEstateToken = artifacts.require('WaynesRealEstateToken');
 const truffleAssert = require('truffle-assertions'); // credit - see https://www.npmjs.com/package/truffle-assertions and https://github.com/rkalis/truffle-assertions
 
 contract('TestERC721Mintable', accounts => {
-
     const account_one = accounts[0];
     const account_two = accounts[1];
-
     describe('match erc721 spec', function () {
         beforeEach(async function () {
             this.contract = await WaynesRealEstateToken.new("WaynesRealEstateToken", "WSPPROPNFT",{from: account_one});

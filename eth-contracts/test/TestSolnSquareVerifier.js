@@ -21,4 +21,4 @@ contract('TestSolnSquareVerifier', async(accounts) => {
         let tx = await this.contract.Mint_WaynesRealEstateToken(914, accounts[1], proof.proof, proof.inputs, {from: accounts[0]});
         assert.equal(await this.contract.ownerOf(914), accounts[1], "Cannot verify that the token was minted for the specified owner.");
     })
-  })
+})

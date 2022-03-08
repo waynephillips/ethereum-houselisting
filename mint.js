@@ -11,16 +11,16 @@ const NUM_NFT_TOKENS = 10;
 const NFT_ABI = JSON.parse(fs.readFileSync("./eth-contracts/build/contracts/SolnSquareVerifier.json"));
 
 const proof = [
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
-  require('./zokrates/code/square/proof'),
+  require('./zokrates/code/square/proof39.json'),
+  require('./zokrates/code/square/proof416.json'),
+  require('./zokrates/code/square/proof525.json'),
+  require('./zokrates/code/square/proof636.json'),
+  require('./zokrates/code/square/proof749.json'),
+  require('./zokrates/code/square/proof864.json'),
+  require('./zokrates/code/square/proof981.json'),
+  require('./zokrates/code/square/proof10100.json'),
+  require('./zokrates/code/square/proof11121.json'),
+  require('./zokrates/code/square/proof12144.json'),
   ];
 
 async function main() {

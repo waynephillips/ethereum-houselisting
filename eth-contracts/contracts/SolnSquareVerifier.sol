@@ -11,11 +11,6 @@ contract SolnSquareVerifier is WaynesRealEstateToken {
     constructor (address verifiercontract, string memory tokenname, string memory tokensymbol) public WaynesRealEstateToken (tokenname, tokensymbol) {
         verifier = Verifier(verifiercontract);
     }
-    /*
-    constructor(address contractAddress) public {
-        verifier = Verifier(contractAddress);
-    }
-    */
     // TODO define a solutions struct that can hold an index & an address
     struct Solution {
         uint256 index;

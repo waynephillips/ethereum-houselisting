@@ -19,11 +19,11 @@
  */
 
  const HDWalletProvider = require('truffle-hdwallet-provider');
- const infuraKey = "b043d5e78ced40329c14e8459cde23a3";  // need tochange this to be specific to my setup
+ const infuraKey = "bc04374e3c944f2f8ac013a7edff049b";  // need tochange this to be specific to my setup
  //
- //const fs = require('fs');
- //const mnemonic = fs.readFileSync("../.secret").toString().trim();
- const mnemonic = "mule cushion need topic rebel tackle copper oppose deputy expand grab alpha";
+ const fs = require('fs');
+ const mnemonic = fs.readFileSync("../.secret").toString().trim();
+ //const mnemonic = "mule cushion need topic rebel tackle copper oppose deputy expand grab alpha";
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -45,7 +45,6 @@ module.exports = {
      development: {
       provider: function() {
         return new HDWalletProvider(mnemonic, "http://127.0.0.1:8545/", 0, 50);
-        //return new HDWalletProvider(mnemonic, "http://127.0.0.1:7545/", 0, 50);
       },
       //host: "127.0.0.1",     // Localhost (default: none)
       //port: 8545,            // Standard Ethereum port (default: none)

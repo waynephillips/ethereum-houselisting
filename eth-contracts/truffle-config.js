@@ -22,8 +22,8 @@
  const infuraKey = "bc04374e3c944f2f8ac013a7edff049b";  // need tochange this to be specific to my setup
  //
  const fs = require('fs');
- const mnemonic = fs.readFileSync("../.secret").toString().trim();
- //const mnemonic = "mule cushion need topic rebel tackle copper oppose deputy expand grab alpha";
+ //const mnemonic = fs.readFileSync("../.secret").toString().trim();
+ const mnemonic = "mule cushion need topic rebel tackle copper oppose deputy expand grab alpha";
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the

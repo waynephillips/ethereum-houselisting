@@ -30,8 +30,22 @@ Once the token has been verified you will place it on a blockchain market place 
 * [Docker](https://docs.docker.com/install/)
 * [ZoKrates](https://github.com/Zokrates/ZoKrates)
 
+## Dependencies
+- Web3.js - v1.5.2
+- Node - v10.9.0
+- OpenZeppelin - v2.2.0
+- Solidity - v0.5.2
+- Truffle - v5.5.3
+- Ganache - v7.0.1
+- Truffle-Assertions - v0.9.2
+- Truffle-hdwallet-provider - v1.0.17
+
+
 ## How to Test
+- ensure node version is set to v10.9 (recommend use NVM - `nvm use 10.9`)
+- `npm install` to ensure you have the correct dependencies on your machine.
 - `cd eth-contracts`
+- ensure `const mnemonic` in truffle-config.js matches your ganache configuration.
 - `truffle compile`
 - Run Ganache UI (http://127.0.0.1:8545/)
 - Run Truffle Tests:
@@ -84,3 +98,11 @@ Once the token has been verified you will place it on a blockchain market place 
 - TokenId 103  https://testnets.opensea.io/assets/0x5e9a75e1a1f9a178ffe89518a5fee37a72e47433/103
 - TokenId 102  https://testnets.opensea.io/assets/0x5e9a75e1a1f9a178ffe89518a5fee37a72e47433/102
 - TokenId 100  https://testnets.opensea.io/assets/0x5e9a75e1a1f9a178ffe89518a5fee37a72e47433/100
+
+## Purchase transactions
+Tokens were purchased from address 0xa8154d5a6726d43244DC18B882E14eF0618038B0
+- TokenId 110 - https://rinkeby.etherscan.io/tx/0xe16955dfa51720d2b99bccc46bf2de4ce5aaacdee28b0b936914169d26fd5bbc
+- TokenId 109 - https://rinkeby.etherscan.io/tx/0x884ffd2e43ba4664640b6a9597f7a0efb77dd7558b23bf924e929a4401b540db
+- TokenId 108 - https://rinkeby.etherscan.io/tx/0xdb578b87a3d8830b68b568a1867cb5b32b16f1ffb4adaf5aa15fa811a9d23700
+- TokenId 107 - https://rinkeby.etherscan.io/tx/0xeebde2c0bf55a06c4a1258992b7fb2b273ff2fe148673149e4997162b35e0ff6
+- TokenId 106 - https://rinkeby.etherscan.io/tx/0x8ca36f7b6ea43708ad0f9aa7f1e157104c5ef83b89ccfbb5c36f6f29f6b374d7
